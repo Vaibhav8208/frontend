@@ -1,0 +1,10 @@
+<h2>Attendance</h2>
+<form (ngSubmit)="markAttendance()">
+  <div *ngFor="let student of students">
+    <label>
+      {{student.name}}:
+      <input type="checkbox" [(ngModel)]="student.isPresent" name="attendance_{{student.id}}">
+    </label>
+  </div>
+  <button type="submit">Submit Attendance</button>
+</form>
